@@ -12,6 +12,7 @@ describe("GET api/tasks", ()=>{
         const response = await request(app).get("/api/tasks")
         expect(typeof response.body == "object").toBe(true)
         expect(response.body).toHaveProperty("tasks")
+        console.log("seeded data", response.body.tasks)
     })
 })
 
